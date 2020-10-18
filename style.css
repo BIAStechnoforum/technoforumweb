@@ -1,0 +1,84 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.container-box
+{
+    padding:50px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.basic-info>:nth-child(1)
+{
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px;
+}
+.basic-info>:nth-child(2)
+{
+    color: #5a5a5a;
+    text-align: center;
+    font-weight: lighter;
+    padding: 3px 10px;
+    margin: 15px;
+}
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0px;
+    align-items: center;
+    justify-content: center;
+}
+.card
+{
+    padding:5px;
+    margin: 2px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px #80808040 solid;
+    border-radius: 3px;
+}
+.card:hover
+{
+    background: #00000017;
+}
+.profile
+{
+    width: 50px;
+    height: 50px;
+    margin: 3px 7px;
+    padding: 3px;
+    border-radius: 50%;
+}
+.profile img
+{
+    width: 50px;
+    height: 50px;
+}
+.info
+{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 2px;
+}
+.name
+{
+    font-weight: bold;
+}
+.pos
+{
+    color: grey;
+    margin:2px 0px;
+}
