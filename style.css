@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Quicksand", sans-serif;
+}
+.project {
+  overflow: hidden;
+}
+.project .projectbody {
+  width: 70%;
+  margin: auto;
+}
+.project .projectbody .txt {
+  text-align: center;
+}
+.txt h2 {
+  font-size: 5rem;
+  margin-bottom: 6rem;
+  position: relative;
+}
+.txt h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  top: 8rem;
+  width: 50rem;
+  height: 0.3rem;
+  background-color: black;
+  transform: translateX(-50%);
+}
+.txt h2::after {
+  content: "Projects";
+  position: absolute;
+  bottom: -2.9rem;
+  /* top: 8rem; */
+  left: 50%;
+  font-size: 2rem;
+  padding: 0.5rem;
+  color: crimson;
+  background-color: white;
+  transform: translateX(-50%);
+}
+.txt p {
+  font-size: 1.9rem;
+  margin-bottom: 6rem;
+}
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  height: 280px;
+  width: 450px;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover {
+  cursor: pointer;
+}
+.cardtext1:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("wb.PNG");
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+.cardtext1:hover:before {
+  transition: 0.4s ease-in-out;
+  opacity: 0.5;
+  color: black;
+}
+
+.cardtext1 > p {
+  display: none;
+}
+.cardtext1 > h3 {
+  display: none;
+}
+.cardtext1:hover > p {
+  position: absolute;
+  top: 25%;
+  display: block;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+.cardtext1:hover > h3 {
+  position: absolute;
+  display: block;
+  color: black;
+  font-size: 3rem;
+  padding-bottom: 1.9rem;
+  font-family: "Quicksand", sans-serif;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+
+.cardtext2:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("ap.jpg");
+  background-size: cover;
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+.cardtext2:hover:before {
+  transition: 0.4s ease-in-out;
+  opacity: 0.5;
+  color: black;
+}
+
+.cardtext2 > p {
+  display: none;
+}
+.cardtext2 > h3 {
+  display: none;
+}
+.cardtext2:hover > p {
+  position: absolute;
+  top: 25%;
+  display: block;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+.cardtext2:hover > h3 {
+  position: absolute;
+  display: block;
+  color: black;
+  font-size: 3rem;
+  padding-bottom: 1.9rem;
+  font-family: "Quicksand", sans-serif;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+.cardtext3:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("ai.jpg");
+  background-size: cover;
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+.cardtext3:hover:before {
+  transition: 0.4s ease-in-out;
+  opacity: 0.5;
+  color: black;
+}
+
+.cardtext3 > p {
+  display: none;
+}
+.cardtext3 > h3 {
+  display: none;
+}
+.cardtext3:hover > p {
+  position: absolute;
+  top: 25%;
+  display: block;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+.cardtext3:hover > h3 {
+  position: absolute;
+  display: block;
+  color: black;
+  font-size: 3rem;
+  padding-bottom: 1.9rem;
+  font-family: "Quicksand", sans-serif;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+
+.cardtext4:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("code.jpg");
+  background-size: cover;
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+.cardtext4:hover:before {
+  transition: 0.4s ease-in-out;
+  opacity: 0.5;
+  color: black;
+}
+
+.cardtext4 > p {
+  display: none;
+}
+.cardtext4 > h3 {
+  display: none;
+}
+.cardtext4:hover > p {
+  position: absolute;
+  top: 25%;
+  display: block;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+.cardtext4:hover > h3 {
+  position: absolute;
+  display: block;
+  color: black;
+  font-size: 3rem;
+  padding-bottom: 1.9rem;
+  font-family: "Quicksand", sans-serif;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+
+.cardtext5:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("robo.jpg");
+  background-size: cover;
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+.cardtext5:hover:before {
+  transition: 0.4s ease-in-out;
+  opacity: 0.5;
+  color: black;
+}
+
+.cardtext5 > p {
+  display: none;
+}
+.cardtext5 > h3 {
+  display: none;
+}
+.cardtext5:hover > p {
+  position: absolute;
+  top: 25%;
+  display: block;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+.cardtext5:hover > h3 {
+  position: absolute;
+  display: block;
+  color: black;
+  font-size: 3rem;
+  padding-bottom: 1.9rem;
+  font-family: "Quicksand", sans-serif;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+
+.cardtext6:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("ml.png");
+  background-size: cover;
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+.cardtext6:hover:before {
+  transition: 0.4s ease-in-out;
+  opacity: 0.5;
+  color: black;
+}
+
+.cardtext6 > p {
+  display: none;
+}
+.cardtext6 > h3 {
+  display: none;
+}
+.cardtext6:hover > p {
+  position: absolute;
+  top: 25%;
+  display: block;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+.cardtext6:hover > h3 {
+  position: absolute;
+  display: block;
+  color: black;
+  font-size: 3rem;
+  padding-bottom: 1.9rem;
+  font-family: "Quicksand", sans-serif;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+
+.btn {
+  height: 3rem;
+  width: 10rem;
+  border-radius: 0.5rem;
+  bottom: 0px;
+  margin: auto;
+  outline: none;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  background-color: rgba(187, 255, 190, 0.658);
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(161, 232, 255);
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 43%;
+  }
+}
+@media (max-width: 558px) {
+  .txt h2::before {
+    top: 13.5rem;
+  }
+}
