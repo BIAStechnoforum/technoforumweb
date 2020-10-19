@@ -2,3 +2,4 @@
 .error_log
 cgi-bin
 .well-known
+.env.php
