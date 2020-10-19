@@ -6,6 +6,9 @@
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+a{
+    text-decoration: none;
+}
 .container-box
 {
     padding:50px;
@@ -20,7 +23,7 @@ body{
     font-weight: bold;
     font-size: 2rem;
     text-align: center;
-    margin: 10px;
+    margin-bottom: 15px !important;
 }
 .basic-info>:nth-child(2)
 {
@@ -28,7 +31,7 @@ body{
     text-align: center;
     font-weight: lighter;
     padding: 3px 10px;
-    margin: 15px;
+    margin: 10px;
 }
 .container
 {
@@ -40,6 +43,8 @@ body{
 }
 .card
 {
+    width:222px;
+    height:62px;
     padding:5px;
     margin: 2px;
     box-sizing: border-box;
@@ -48,18 +53,55 @@ body{
     justify-content: center;
     border: 1px #80808040 solid;
     border-radius: 3px;
+    transition: 0.2s ease-in;
 }
-.card:hover
+.contact
 {
-    background: #00000017;
+    display: none;
 }
-.profile
+.contact img
 {
     width: 50px;
     height: 50px;
+}
+.card:hover
+{
+    flex-direction: column;
+    background: #00000017;
+    align-items: center;
+    justify-content: center;
+    height:250px;
+}
+.card:hover .contact
+{
+    display: flex;
+    flex-direction: row;
+    
+}
+.card:hover .contact img
+{
+    border-radius: 50%;
+}
+.card:hover .info{
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.card:hover .profile
+{
+    width: 50%;
+}
+.card:hover .profile img
+{
+    height: 100px;
+    width:100px;
+}
+.profile
+{
+    width:30%;
+    position: relative;
     margin: 3px 7px;
     padding: 3px;
-    
 }
 .profile img
 {
@@ -67,8 +109,11 @@ body{
     height: 50px;
     border-radius: 50%;
 }
+
 .info
 {
+    width: 70%;
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: 5px;
@@ -82,4 +127,8 @@ body{
 {
     color: grey;
     margin:2px 0px;
+}
+p
+{
+    margin:0 0 0px !important;
 }
