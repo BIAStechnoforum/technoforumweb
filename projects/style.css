@@ -79,7 +79,7 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("https://github.com/karanjoshi1206/technoforumweb/blob/main/assets/img/projimages/wb.PNG");
+  background-image: url("../assets/img/projimages/wb.PNG");
   background-size: cover;
   border-radius: 3rem;
   opacity: 1;
@@ -134,7 +134,7 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("https://github.com/karanjoshi1206/technoforumweb/blob/main/assets/img/projimages/ap.jpg");
+  background-image: url("../assets/img/projimages/ap.jpg");
   background-size: cover;
   border-radius: 3rem;
   opacity: 1;
@@ -188,7 +188,7 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("https://github.com/karanjoshi1206/technoforumweb/blob/main/assets/img/projimages/ai.jpg");
+  background-image: url("../assets/img/projimages/ai.jpg");
   background-size: cover;
   border-radius: 3rem;
   opacity: 1;
@@ -242,7 +242,7 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("https://github.com/karanjoshi1206/technoforumweb/blob/main/assets/img/projimages/code.jpg");
+  background-image: url("../assets/img/projimages/code.jpg");
   border-radius: 3rem;
   background-size: cover;
   opacity: 1;
@@ -297,7 +297,7 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("https://github.com/karanjoshi1206/technoforumweb/blob/main/assets/img/projimages/robo.jpg");
+  background-image: url("../assets/img/projimages/robo.jpg");
   border-radius: 3rem;
   background-size: cover;
   opacity: 1;
@@ -352,7 +352,7 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("https://github.com/karanjoshi1206/technoforumweb/blob/main/assets/img/projimages/ml.png");
+  background-image: url("../assets/img/projimages/ml.png");
   border-radius: 3rem;
   background-size: cover;
   opacity: 1;
