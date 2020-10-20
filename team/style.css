@@ -5,6 +5,7 @@
 }
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#444444
 }
 a{
     text-decoration: none;
@@ -20,6 +21,8 @@ a{
 }
 .basic-info>:nth-child(1)
 {
+    color: #37517e;
+    text-transform: uppercase;
     font-weight: bold;
     font-size: 2rem;
     text-align: center;
@@ -27,13 +30,22 @@ a{
 }
 .basic-info>:nth-child(2)
 {
-    color: #5a5a5a;
+    color: #444444;
     text-align: center;
     font-weight: lighter;
     padding: 3px 10px;
     margin: 10px;
 }
-.container
+.info>:last-child
+{
+    margin: 10px 0 0 0 !important;
+    font-size: 14px;
+}
+.card:hover .info>:last-child
+{
+    text-align: center;
+}
+.cards
 {
     display: flex;
     flex-wrap: wrap;
@@ -43,26 +55,22 @@ a{
 }
 .card
 {
-    width:222px;
-    height:62px;
+    width:340px;
+    height:182px;
     padding:5px;
     margin: 2px;
     box-sizing: border-box;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     border: 1px #80808040 solid;
     border-radius: 3px;
-    transition: 0.2s ease-in;
+    transition: 0.2s ease-in-out;
 }
 .contact
 {
     display: none;
-}
-.contact img
-{
-    width: 50px;
-    height: 50px;
 }
 .card:hover
 {
@@ -70,17 +78,12 @@ a{
     background: #00000017;
     align-items: center;
     justify-content: center;
-    height:250px;
+    height:300px;
 }
 .card:hover .contact
 {
     display: flex;
     flex-direction: row;
-    
-}
-.card:hover .contact img
-{
-    border-radius: 50%;
 }
 .card:hover .info{
     align-items: center;
@@ -89,12 +92,15 @@ a{
 }
 .card:hover .profile
 {
-    width: 50%;
+    width: 35%;
+    align-items: center;
+    justify-content: center;
 }
 .card:hover .profile img
 {
     height: 100px;
     width:100px;
+    border-radius: 50%;
 }
 .profile
 {
@@ -105,8 +111,8 @@ a{
 }
 .profile img
 {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
 }
 
@@ -122,13 +128,53 @@ a{
 .name
 {
     font-weight: bold;
+    color:#37517e;
 }
 .pos
 {
-    color: grey;
-    margin:2px 0px;
+    display: block;
+  font-size: 15px;
+  padding-bottom: 10px;
+  position: relative;
+  font-weight: 500;
+}
+.pos::after
+{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #cbd6e9;
+    bottom: 0;
+    left: 0;
+}
+.cards:hover .info .pos::after
+{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #cbd6e9;
+    bottom: 0;
+    left: 40px;
+
 }
 p
 {
     margin:0 0 0px !important;
+}
+.contact a:hover
+{
+    padding: 1px;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    background: #1DA1F2;
+    border-radius: 50%;
+}
+.contact a:hover i
+{
+    color:white !important;
 }
