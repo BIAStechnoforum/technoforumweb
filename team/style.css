@@ -67,19 +67,21 @@ a{
     justify-content: center;
     border: 1px #80808040 solid;
     border-radius: 5px;
-    transition: 0.2s ease-in-out;
+    transition: 0.3s cubic-bezier(0.215, 0.610, 0.355, 1) !important;
 }
 .contact
 {
+    transition: 5s ease-in;
     display: none;
 }
 .card:hover
 {
+    padding: 10px;
     margin: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:300px;
+    height:325px;
 }
 .card:hover .contact
 {
@@ -159,7 +161,6 @@ a{
     background: #cbd6e9;
     bottom: 0;
     left: 40px;
-
 }
 p
 {
@@ -167,13 +168,20 @@ p
 }
 .contact a:hover
 {
-    padding: 1px;
+    background: #1DA1F2;
+    transform:translateY(-5px);
+}
+.contact a
+{
+    margin: 8px;
+    transition: ease-in-out 0.3s;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 49px;
-    height: 50px;
-    background: #1DA1F2;
-    border-radius: 50%;
+    border-radius: 50px;
+    width: 45px;
+    height: 45px;
+    background: #eff2f8;
 }
 .contact a:hover i
 {
