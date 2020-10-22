@@ -23,6 +23,8 @@ html {
 .txt h2 {
   font-size: 5rem;
   margin-bottom: 6rem;
+  color: #37517e;
+
   position: relative;
 }
 .txt h2::before {
@@ -33,7 +35,7 @@ html {
   top: 8rem;
   width: 50rem;
   height: 0.3rem;
-  background-color: black;
+  background: #47b2e4;
   transform: translateX(-50%);
 }
 .txt h2::after {
@@ -59,12 +61,13 @@ html {
   flex-wrap: wrap;
 }
 .card {
-  height: 280px;
-  width: 450px;
-  border-radius: 5px;
+  height: 28rem;
+  width: 45rem;
+  border-radius: 3rem;
   margin-bottom: 2rem;
   position: relative;
   transition: all 0.5s ease-in-out;
+  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.384);
 }
 .card:hover {
   cursor: pointer;
@@ -76,9 +79,9 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("wb.PNG");
-  -webkit-filter: grayscale(0) blur(0);
-  filter: grayscale(0) blur(0);
+  background-image: url("../assets/img/projimages/wb.PNG");
+  background-size: cover;
+  border-radius: 3rem;
   opacity: 1;
   transition: 0.4s ease-in-out;
 }
@@ -90,22 +93,25 @@ html {
 
 .cardtext1 > p {
   display: none;
+  bottom: 0;
 }
 .cardtext1 > h3 {
   display: none;
+  margin-top: 2rem;
 }
 .cardtext1:hover > p {
   position: absolute;
-  top: 25%;
   display: block;
-  color: black;
-  font-size: 1.5rem;
+  color: white;
+  font-size: 1.4rem;
   font-weight: bold;
-  z-index: 9999999;
+  z-index: 1;
+  opacity: 0.9;
   width: 100%;
-  height: 100%;
+  height: 70%;
   text-align: center;
   transition: 0.4s ease-in-out;
+  background-color: #37517e;
 }
 .cardtext1:hover > h3 {
   position: absolute;
@@ -128,10 +134,9 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("ap.jpg");
+  background-image: url("../assets/img/projimages/ap.jpg");
   background-size: cover;
-  -webkit-filter: grayscale(0) blur(0);
-  filter: grayscale(0) blur(0);
+  border-radius: 3rem;
   opacity: 1;
   transition: 0.4s ease-in-out;
 }
@@ -143,22 +148,25 @@ html {
 
 .cardtext2 > p {
   display: none;
+  bottom: 0;
 }
 .cardtext2 > h3 {
   display: none;
+  margin-top: 2rem;
 }
 .cardtext2:hover > p {
   position: absolute;
-  top: 25%;
   display: block;
-  color: black;
-  font-size: 1.5rem;
+  color: white;
+  font-size: 1.4rem;
   font-weight: bold;
-  z-index: 9999999;
+  z-index: 1;
+  opacity: 0.9;
   width: 100%;
-  height: 100%;
+  height: 70%;
   text-align: center;
   transition: 0.4s ease-in-out;
+  background-color: #37517e;
 }
 .cardtext2:hover > h3 {
   position: absolute;
@@ -180,10 +188,9 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("ai.jpg");
+  background-image: url("../assets/img/projimages/ai.jpg");
   background-size: cover;
-  -webkit-filter: grayscale(0) blur(0);
-  filter: grayscale(0) blur(0);
+  border-radius: 3rem;
   opacity: 1;
   transition: 0.4s ease-in-out;
 }
@@ -195,22 +202,25 @@ html {
 
 .cardtext3 > p {
   display: none;
+  bottom: 0;
 }
 .cardtext3 > h3 {
   display: none;
+  margin-top: 2rem;
 }
 .cardtext3:hover > p {
   position: absolute;
-  top: 25%;
   display: block;
-  color: black;
-  font-size: 1.5rem;
+  color: white;
+  font-size: 1.4rem;
   font-weight: bold;
-  z-index: 9999999;
+  z-index: 1;
+  opacity: 0.9;
   width: 100%;
-  height: 100%;
+  height: 70%;
   text-align: center;
   transition: 0.4s ease-in-out;
+  background-color: #37517e;
 }
 .cardtext3:hover > h3 {
   position: absolute;
@@ -225,7 +235,6 @@ html {
   text-align: center;
   transition: 0.4s ease-in-out;
 }
-
 .cardtext4:before {
   content: "";
   position: absolute;
@@ -233,10 +242,9 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("code.jpg");
+  background-image: url("../assets/img/projimages/code.jpg");
+  border-radius: 3rem;
   background-size: cover;
-  -webkit-filter: grayscale(0) blur(0);
-  filter: grayscale(0) blur(0);
   opacity: 1;
   transition: 0.4s ease-in-out;
 }
@@ -248,22 +256,25 @@ html {
 
 .cardtext4 > p {
   display: none;
+  bottom: 0;
 }
 .cardtext4 > h3 {
   display: none;
+  margin-top: 2rem;
 }
 .cardtext4:hover > p {
   position: absolute;
-  top: 25%;
   display: block;
-  color: black;
-  font-size: 1.5rem;
+  color: white;
+  font-size: 1.4rem;
   font-weight: bold;
-  z-index: 9999999;
+  z-index: 1;
+  opacity: 0.9;
   width: 100%;
-  height: 100%;
+  height: 70%;
   text-align: center;
   transition: 0.4s ease-in-out;
+  background-color: #37517e;
 }
 .cardtext4:hover > h3 {
   position: absolute;
@@ -286,10 +297,9 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("robo.jpg");
+  background-image: url("../assets/img/projimages/robo.jpg");
+  border-radius: 3rem;
   background-size: cover;
-  -webkit-filter: grayscale(0) blur(0);
-  filter: grayscale(0) blur(0);
   opacity: 1;
   transition: 0.4s ease-in-out;
 }
@@ -301,22 +311,25 @@ html {
 
 .cardtext5 > p {
   display: none;
+  bottom: 0;
 }
 .cardtext5 > h3 {
   display: none;
+  margin-top: 2rem;
 }
 .cardtext5:hover > p {
   position: absolute;
-  top: 25%;
   display: block;
-  color: black;
-  font-size: 1.5rem;
+  color: white;
+  font-size: 1.4rem;
   font-weight: bold;
-  z-index: 9999999;
+  z-index: 1;
+  opacity: 0.9;
   width: 100%;
-  height: 100%;
+  height: 70%;
   text-align: center;
   transition: 0.4s ease-in-out;
+  background-color: #37517e;
 }
 .cardtext5:hover > h3 {
   position: absolute;
@@ -339,10 +352,9 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("ml.png");
+  background-image: url("../assets/img/projimages/ml.png");
+  border-radius: 3rem;
   background-size: cover;
-  -webkit-filter: grayscale(0) blur(0);
-  filter: grayscale(0) blur(0);
   opacity: 1;
   transition: 0.4s ease-in-out;
 }
@@ -354,22 +366,25 @@ html {
 
 .cardtext6 > p {
   display: none;
+  bottom: 0;
 }
 .cardtext6 > h3 {
   display: none;
+  margin-top: 2rem;
 }
 .cardtext6:hover > p {
   position: absolute;
-  top: 25%;
   display: block;
-  color: black;
-  font-size: 1.5rem;
+  color: white;
+  font-size: 1.4rem;
   font-weight: bold;
-  z-index: 9999999;
+  z-index: 1;
+  opacity: 0.9;
   width: 100%;
-  height: 100%;
+  height: 70%;
   text-align: center;
   transition: 0.4s ease-in-out;
+  background-color: #37517e;
 }
 .cardtext6:hover > h3 {
   position: absolute;
@@ -388,25 +403,57 @@ html {
 .btn {
   height: 3rem;
   width: 10rem;
-  border-radius: 0.5rem;
-  bottom: 0px;
-  margin: auto;
+  border-radius: 3rem;
+  margin: -1rem 0;
   outline: none;
-  border: none;
+  border: 0.2rem solid white;
+  color: white;
   font-family: "Ubuntu", sans-serif;
-  background-color: rgba(187, 255, 190, 0.658);
+  background-color: transparent;
 }
 .btn:hover {
   cursor: pointer;
-  background-color: rgb(161, 232, 255);
+  background-color: #47b2e4;
 }
-@media (max-width: 780px) {
-  html {
-    font-size: 43%;
+
+@media (max-width: 816px) {
+  .txt h2::before {
+    top: 14rem;
   }
 }
-@media (max-width: 558px) {
+@media (max-width: 790px) {
+  html {
+    font-size: 53%;
+  }
+}
+@media (max-width: 788px) {
   .txt h2::before {
-    top: 13.5rem;
+    top: 7.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .txt h2::before {
+    top: 13.8rem;
+  }
+}
+@media (max-width: 460px) {
+  html {
+    font-size: 45%;
+  }
+
+  body {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 360px) {
+  html {
+    font-size: 45%;
+  }
+  .txt h2 {
+    font-size: 3rem;
+  }
+  .txt h2::before {
+    top: 8.3rem;
   }
 }
