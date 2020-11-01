@@ -1,4 +1,4 @@
-*
+./*
 {
     margin: 0;
     padding: 0;
@@ -186,4 +186,21 @@ p
 .contact a:hover i
 {
     color:white !important;
+}*/
+
+.team .member .social a:hover i 
+{
+    transform: scale(1.1); 
+}
+
+.team .member .social a:hover 
+{
+    transition: ease-in-out 0.3s;
+    transform: translateY(-2px);
+    background: #47b2e4;
+}
+.team .member 
+{
+    padding: 30px !important;
+    height:100%;
 }
