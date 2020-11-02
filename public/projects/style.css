@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Quicksand", sans-serif;
+}
+.project {
+  overflow: hidden;
+}
+.project .projectbody {
+  width: 70%;
+  margin: auto;
+}
+.project .projectbody .txt {
+  text-align: center;
+}
+.txt h2 {
+  font-size: 5rem;
+  margin-bottom: 6rem;
+  color: #37517e;
+
+  position: relative;
+}
+.txt h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  top: 8rem;
+  width: 50rem;
+  height: 0.3rem;
+  background: #47b2e4;
+  transform: translateX(-50%);
+}
+.txt h2::after {
+  content: "Projects";
+  position: absolute;
+  bottom: -2.9rem;
+  /* top: 8rem; */
+  left: 50%;
+  font-size: 2rem;
+  padding: 0.5rem;
+  color: crimson;
+  background-color: white;
+  transform: translateX(-50%);
+}
+.txt p {
+  font-size: 1.9rem;
+  margin-bottom: 6rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  height: 28rem;
+  width: 45rem;
+  border-radius: 3rem;
+  margin-bottom: 2rem;
+  position: relative;
+  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.384);
+}
+.main_text h3 {
+  font-size: 2rem;
+}
+.main_text p {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.cardtext {
+  overflow: hidden;
+  border-radius: 2rem;
+}
+.cardtext:hover .main_text {
+  top: 0;
+}
+
+.cardtext .main_text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 2rem;
+  color: white;
+  position: relative;
+  top: -999px;
+  transition: top 0.7s ease-in-out;
+  background: linear-gradient(black, rgba(0, 0, 0, 0));
+}
+.cardtext1 {
+  background-image: url("../assets/img/projimages/wb.PNG");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+.cardtext2 {
+  background-image: url("../assets/img/projimages/ap.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+.cardtext3 {
+  background-image: url("../assets/img/projimages/ai.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+.cardtext4 {
+  background-image: url("../assets/img/projimages/code.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+.cardtext5 {
+  background-image: url("../assets/img/projimages/robo.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+.cardtext6 {
+  background-image: url("../assets/img/projimages/ml.png");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+.btn {
+  height: 3rem;
+  width: 10rem;
+  border-radius: 3rem;
+  margin: -1rem 0;
+  font-size: 1rem;
+  outline: none;
+  border: 0.2rem solid white;
+  color: white;
+  box-shadow: 0 10px 8px -8px rgb(255, 0, 0);
+  font-family: "Ubuntu", sans-serif;
+  background-color: transparent;
+}
+.btn:hover {
+  cursor: pointer;
+  color: white;
+  box-shadow: 0px 10px 10px -8px rgb(0, 247, 255);
+}
+
+@media (max-width: 816px) {
+  .txt h2::before {
+    top: 14rem;
+  }
+}
+@media (max-width: 790px) {
+  html {
+    font-size: 53%;
+  }
+}
+@media (max-width: 788px) {
+  .txt h2::before {
+    top: 7.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .txt h2::before {
+    top: 13.8rem;
+  }
+}
+@media (max-width: 460px) {
+  html {
+    font-size: 45%;
+  }
+
+  body {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 360px) {
+  html {
+    font-size: 45%;
+  }
+  .txt h2 {
+    font-size: 3rem;
+  }
+  .txt h2::before {
+    top: 8.3rem;
+  }
+}
