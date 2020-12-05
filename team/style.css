@@ -204,3 +204,8 @@ p
     padding: 30px !important;
     height:100%;
 }
+.mobile-nav .active
+{
+    color: #47b2e4;
+    text-decoration: none;
+}
