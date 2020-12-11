@@ -15,7 +15,7 @@ if (!empty($post['action']) && $post['action']=="validateCertificate") {
         array_push($data, $row['certificate_id']);
     }
 
-$json['$data'] = $data;
+    $json['$data'] = $data;
 
     if (in_array($certificateId, $data)) {
         $json['status'] = 'success';
@@ -35,14 +35,10 @@ if (!empty($post['action']) && $post['action']=="getCertificate") {
 
     $data = mysqli_fetch_array($res);
 
-    $certificate = $data['image'];
+    $image = $data['image'];
 
-    if ($certificate == '') {
-        $json['status'] = 'failed';
-    } else {
-        $json['status'] = 'success';
-        $json['certificate'] = $certificate;
-    }
+    $json['status'] = 'success';
+    $json['image'] = $image;
 
     header('Content-Type: application/json');
     echo json_encode($json);

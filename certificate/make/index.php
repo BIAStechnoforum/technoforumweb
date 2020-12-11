@@ -80,7 +80,7 @@
 
         <div class="portfolio-description">
 
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-md-2">
 
             </div>
@@ -90,21 +90,25 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="awardedTo">Awarded to</label>
-                    <input type="text" class="form-control" name="awardedTo" id="awardedTo" placeholder="Enter the Awardee's Name">
+                    <input type="text" class="form-control" name="awardedTo" id="awardedTo" placeholder="Enter the Awardee's Name" value="Test">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="position">Position</label>
-                    <input type="text" class="form-control" name="position" id="position" placeholder="Enter the Position">
+                    <input type="text" class="form-control" name="position" id="position" placeholder="Enter the Position" value="Test">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="competitionName">Competition Name</label>
-                    <input type="text" class="form-control" name="competitionName" id="competitionName" placeholder="Enter the Competition Name">
+                    <input type="text" class="form-control" name="competitionName" id="competitionName" placeholder="Enter the Competition Name" value="Test">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="competitionDate">Competition Date</label>
-                    <input type="date" class="form-control" name="competitionDate" id="competitionDate" placeholder="Enter the Competition Date">
+                    <input type="date" class="form-control" name="competitionDate" id="competitionDate" placeholder="Enter the Competition Date" value="">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="certificateId">Certificate ID</label>
+                    <input type="text" class="form-control" name="certificateId" id="certificateId" placeholder="Enter the Certificate Id" value="">
                   </div>
                 </div>
                 <input type="hidden" name="action" value="generateCertificate">
@@ -114,10 +118,12 @@
             <div class="col-md-2">
 
             </div>
+            <div class="mt-4">
+              <a id="certificateImageUrl" download>
+                <img width="850" id="certificateImage" src="" class="img-fluid">
+              </a>
+            </div>
           </div>
-
-
-          <img id="certificateImage" src="" class="img-fluid" alt="">
 
         </div>
 
@@ -241,6 +247,8 @@
           beforeSend: function() {},
           success: function(data) {
             console.log(data);
+            $('#certificateImage').attr('src',  '/certificate/certificates/' + data.image);
+            $('#certificateImageUrl').attr('href',  '/certificate/certificates/' + data.image);
           },
           error: function(xhr, ajaxOptions, thrownError) {
             console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);

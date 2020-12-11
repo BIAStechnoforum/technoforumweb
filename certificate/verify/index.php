@@ -78,40 +78,50 @@
     <section id="portfolio-details" class="portfolio-details">
       <div class="footer-newsletter container">
 
-        <div class="portfolio-description">
-          <h2>Get Certificate via Certificate ID</h2>
+        <div class="row">
+          <div class="col-xs-0 col-sm-0 col-0 col-md-0 col-lg-4">
+
+          </div>
+          <div class="col-xs-0 col-sm-0 col-0 col-md-0 col-lg-4">
+            <div class="portfolio-description">
+              <h2 style="width: 100%;">Certificate Verification</h2>
 
 
-          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="form-inline" id="findCertificateForm">
-            <!-- <div class="form-group form-elems">
-              <label class="form-labels" for="certificateId">Certificate Id</label>
-              <input type="text" class="form-control modal-text" name="certificateId" id="certificateId" aria-describedby="certificateId" placeholder="Enter the Certificate Id">
-              <div class="valid-feedback"></div>
-              <div class="invalid-feedback">
-                Please enter the correct Certificate ID
-              </div>
-            </div> -->
+              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="form-inline" id="findCertificateForm">
+                <!-- <div class="form-group form-elems">
+                  <label class="form-labels" for="certificateId">Certificate Id</label>
+                  <input type="text" class="form-control modal-text" name="certificateId" id="certificateId" aria-describedby="certificateId" placeholder="Enter the Certificate Id">
+                  <div class="valid-feedback"></div>
+                  <div class="invalid-feedback">
+                    Please enter the correct Certificate ID
+                  </div>
+                </div> -->
 
 
-            <label class="sr-only" for="certificateId">Certificate Id</label>
-            <div class="input-group mb-2 mr-sm-2">
-              <div class="input-group-prepend">
-                <div class="input-group-text"> <b>ID</b> </div>
-              </div>
-              <input type="text" class="form-control" id="certificateId" name="certificateId" placeholder="Enter the Certificate Id">
-              <div class="valid-feedback"></div>
-              <div class="invalid-feedback">
-                Please enter the correct Certificate ID
-              </div>
-              <button class="btn btn-info" type="button" name="button" id="findCertificate">Check</button>
+                <label class="sr-only" for="certificateId">Certificate Id</label>
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"> <b>ID</b> </div>
+                  </div>
+                  <input type="text" class="form-control" id="certificateId" name="certificateId" placeholder="Enter the Certificate Id">
+                  <div class="valid-feedback"></div>
+                  <div class="invalid-feedback">
+                    Please enter the correct Certificate ID
+                  </div>
+                  <button class="btn btn-info" type="button" name="button" id="findCertificate">Check</button>
+                </div>
+
+                <input type="hidden" name="action" value="getCertificate">
+
+              </form>
+
+                <img width="850" id="certificateImage" src="" class="img-fluid">
+
             </div>
+          </div>
+          <div class="col-xs-0 col-sm-0 col-0 col-md-0 col-lg-4">
 
-            <input type="hidden" name="action" value="getCertificate">
-
-          </form>
-
-            <img id="certificateImage" src="" class="img-fluid" alt="">
-
+          </div>
         </div>
 
         </div>
@@ -229,7 +239,7 @@
 
     jQuery.ajax({
       type: 'POST',
-      url: 'find.php',
+      url: 'verify.php',
       data: {
         action: "validateCertificate",
         certificateId: certificateId
@@ -271,7 +281,7 @@
 
       let fd = new FormData(document.querySelector('#findCertificateForm'));
       $.ajax({
-        url: "find.php",
+        url: "verify.php",
         type: "POST",
         data: fd,
         contentType: false,
@@ -284,7 +294,8 @@
             $('#certificateId').removeClass('is-invalid');
             $('#certificateId').addClass('is-valid');
 
-            $('#certificateImage').attr('src', data.certificate);
+            $('#certificateImage').attr('src',  '/certificate/certificates/' + data.image);
+            $('#certificateImageUrl').attr('href',  '/certificate/certificates/' + data.image);
           } else if (data.status == "failed") {
             $('#certificateId').removeClass('is-valid');
             $('#certificateId').addClass('is-invalid');
