@@ -29,8 +29,12 @@
   <link href="/assets/css/style.css" rel="stylesheet">
 
   <!-- TailWind CSS -->
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
+  <style media="screen">
+    .form-inline .custom-select, .form-inline .input-group {
+      width: -webkit-fill-available;
+    }
+  </style>
 </head>
 
 <body>
@@ -67,15 +71,73 @@
 
         <ol>
           <li><a href="index.html">Home</a></li>
-          <li>Certificate</li>
+          <li>Certificate Verification</li>
         </ol>
-        <h2>Certificate</h2>
+        <h2>Certificate Verification</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
     <!-- ======= Project Details Section ======= -->
+
+
     <section id="portfolio-details" class="portfolio-details">
+      <div class="footer-newsletter container">
+
+        <div class="portfolio-description pt-0">
+
+          <div class="row justify-content-center">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6">
+              <form method="POST" id="findCertificateForm">
+                <div class="form-row">
+                  <label for="certificateId">Certificate Id</label>
+                  <div class="input-group mb-2 mr-sm-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"> <b>ID</b> </div>
+                    </div>
+                    <input type="text" class="form-control" id="certificateId" name="certificateId" placeholder="Enter the Certificate Id">
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">
+                      Please enter the correct Certificate ID
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" name="action" value="getCertificate">
+                <button class="btn btn-block btn-info" type="button" name="button" id="findCertificate">Check</button>
+              </form>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+            <div class="mt-4">
+              <a id="certificateImageUrl" download>
+                <img width="450" id="certificateImage" src="/assets/img/certification.svg" class="img-fluid">
+                <div class="logs" style="font-size: larger;">
+
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <section id="portfolio-details" class="portfolio-details pt-0">
       <div class="footer-newsletter container">
 
         <div class="row">
@@ -84,20 +146,7 @@
           </div>
           <div class="col-xs-0 col-sm-0 col-0 col-md-0 col-lg-4">
             <div class="portfolio-description">
-              <h2 style="width: 100%;">Certificate Verification</h2>
-
-
-              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="form-inline" id="findCertificateForm">
-                <!-- <div class="form-group form-elems">
-                  <label class="form-labels" for="certificateId">Certificate Id</label>
-                  <input type="text" class="form-control modal-text" name="certificateId" id="certificateId" aria-describedby="certificateId" placeholder="Enter the Certificate Id">
-                  <div class="valid-feedback"></div>
-                  <div class="invalid-feedback">
-                    Please enter the correct Certificate ID
-                  </div>
-                </div> -->
-
-
+              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="" id="findCertificateForm">
                 <label class="sr-only" for="certificateId">Certificate Id</label>
                 <div class="input-group mb-2 mr-sm-2">
                   <div class="input-group-prepend">
@@ -108,14 +157,18 @@
                   <div class="invalid-feedback">
                     Please enter the correct Certificate ID
                   </div>
-                  <button class="btn btn-info" type="button" name="button" id="findCertificate">Check</button>
                 </div>
-
                 <input type="hidden" name="action" value="getCertificate">
-
               </form>
+              <button class="btn btn-block btn-info" type="button" name="button" id="findCertificate">Check</button>
+                <div class="pt-4">
+                  <a id="certificateImageUrl" download>
+                    <img width="850" id="certificateImage" src="/assets/img/certification.svg" class="img-fluid">
+                  </a>
+                  <div class="logs">
 
-                <img width="850" id="certificateImage" src="" class="img-fluid">
+                  </div>
+                </div>
 
             </div>
           </div>
@@ -127,7 +180,8 @@
         </div>
 
       </div>
-    </section><!-- End Project Details Section -->
+    </section> -->
+    <!-- End Project Details Section -->
 
   </main><!-- End #main -->
 
@@ -289,16 +343,24 @@
         processData: false,
         beforeSend: function() {},
         success: function(data) {
-          console.log(data);
           if (data.status == "success") {
             $('#certificateId').removeClass('is-invalid');
             $('#certificateId').addClass('is-valid');
 
+            $('#certificateImage').attr('width',  '850'); certificateImageUrl
             $('#certificateImage').attr('src',  '/certificate/certificates/' + data.image);
             $('#certificateImageUrl').attr('href',  '/certificate/certificates/' + data.image);
+
+            $('.logs').html(``);
           } else if (data.status == "failed") {
             $('#certificateId').removeClass('is-valid');
             $('#certificateId').addClass('is-invalid');
+
+            $('#certificateImage').attr('width',  '450');
+            $('#certificateImage').attr('src',  '/assets/img/empty.svg');
+            $('#certificateImageUrl').attr('href',  '/assets/img/empty.svg');
+
+            $('.logs').html(`<h3 class="text-bold text-danger text-center">This Certificate ID does not exists.</h3>`);
           }
         },
         error: function(xhr, ajaxOptions, thrownError) {
@@ -308,6 +370,12 @@
     } else {
       $('#certificateId').removeClass('is-valid');
       $('#certificateId').addClass('is-invalid');
+
+      $('#certificateImage').attr('width',  '450');
+      $('#certificateImage').attr('src',  '/assets/img/empty.svg');
+      $('#certificateImageUrl').attr('href',  '/assets/img/empty.svg');
+
+      $('.logs').html(`<h3 class="text-bold text-danger text-center">This Certificate ID does not exists.</h3>`);
     }
   }));
 

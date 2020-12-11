@@ -67,9 +67,9 @@
 
         <ol>
           <li><a href="index.html">Home</a></li>
-          <li>Certificate</li>
+          <li>Generate Certificate</li>
         </ol>
-        <h2>Certificate</h2>
+        <h2>Generate Certificate</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
@@ -78,37 +78,36 @@
     <section id="portfolio-details" class="portfolio-details">
       <div class="footer-newsletter container">
 
-        <div class="portfolio-description">
+        <div class="portfolio-description pt-0">
 
           <div class="row justify-content-center">
             <div class="col-md-2">
 
             </div>
             <div class="col-md-8">
-              <h2>Generate a Certificate</h2>
               <form method="POST" id="generateCertificateForm">
                 <div class="form-row">
-                  <div class="form-group col-md-6">
+                  <div class="form-group col-md-4">
                     <label for="awardedTo">Awarded to</label>
                     <input type="text" class="form-control" name="awardedTo" id="awardedTo" placeholder="Enter the Awardee's Name" value="Test">
                   </div>
-                  <div class="form-group col-md-6">
+                  <div class="form-group col-md-4">
                     <label for="position">Position</label>
                     <input type="text" class="form-control" name="position" id="position" placeholder="Enter the Position" value="Test">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="competitionName">Competition Name</label>
+                    <input type="text" class="form-control" name="competitionName" id="competitionName" placeholder="Enter the Competition Name" value="Test">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="competitionName">Competition Name</label>
-                    <input type="text" class="form-control" name="competitionName" id="competitionName" placeholder="Enter the Competition Name" value="Test">
+                    <label for="certificateId">Certificate ID</label>
+                    <input type="text" class="form-control" name="certificateId" id="certificateId" placeholder="Enter the Certificate Id" value="">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="competitionDate">Competition Date</label>
                     <input type="date" class="form-control" name="competitionDate" id="competitionDate" placeholder="Enter the Competition Date" value="">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="certificateId">Certificate ID</label>
-                    <input type="text" class="form-control" name="certificateId" id="certificateId" placeholder="Enter the Certificate Id" value="">
                   </div>
                 </div>
                 <input type="hidden" name="action" value="generateCertificate">
@@ -120,7 +119,10 @@
             </div>
             <div class="mt-4">
               <a id="certificateImageUrl" download>
-                <img width="850" id="certificateImage" src="" class="img-fluid">
+                <img width="450" id="certificateImage" src="/assets/img/empty_certificate.svg" class="img-fluid">
+                <div class="logs" style="font-size: larger;">
+
+                </div>
               </a>
             </div>
           </div>
@@ -128,7 +130,8 @@
         </div>
 
       </div>
-    </section><!-- End Project Details Section -->
+    </section>
+    <!-- End Project Details Section -->
 
   </main><!-- End #main -->
 
@@ -246,9 +249,16 @@
           processData: false,
           beforeSend: function() {},
           success: function(data) {
-            console.log(data);
-            $('#certificateImage').attr('src',  '/certificate/certificates/' + data.image);
-            $('#certificateImageUrl').attr('href',  '/certificate/certificates/' + data.image);
+            if(data.status == 'success') {
+              $('#certificateImage').attr('width',  '850');
+              $('#certificateImage').attr('src',  '/certificate/certificates/' + data.image);
+              $('#certificateImageUrl').attr('href',  '/certificate/certificates/' + data.image);
+              $('.logs').html(``);
+            } else {
+              $('#certificateImage').attr('width',  '450');
+              $('#certificateImage').attr('src',  '/assets/img/empty.svg');
+              $('.logs').html(`<h1 class="text-bold text-danger text-center">This Certificate ID already exists.</h1>`);
+            }
           },
           error: function(xhr, ajaxOptions, thrownError) {
             console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);

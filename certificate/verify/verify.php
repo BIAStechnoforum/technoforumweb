@@ -9,7 +9,7 @@ if (!empty($post['action']) && $post['action']=="validateCertificate") {
     $certificateId = $post['certificateId'];
     $data = array();
 
-    $sql = "SELECT certificate_id FROM certificates WHERE certificate_id = '$certificateId'";
+    $sql = "SELECT certificate_id FROM certificates";
     $res = mysqli_query($link, $sql);
     while ($row = mysqli_fetch_array($res)) {
         array_push($data, $row['certificate_id']);
