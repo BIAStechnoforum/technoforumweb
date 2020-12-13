@@ -1,9 +1,11 @@
 <?php
 session_start();
-if (!(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)) {
+if (!isset($_SESSION['loggedin'])) {
   header('Location: /');
   exit;
 }
+
+print_r("<pre>" . print_r($_SESSION, 4) . "</pre>");
 ?>
 <!DOCTYPE html>
 <html lang="en">
