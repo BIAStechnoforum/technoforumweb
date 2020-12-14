@@ -1,3 +1,70 @@
+<!--
+<html>  
+<head>  
+    <title>PHP login system</title>  
+    <link rel = "stylesheet" type = "text/css" href = "style.css">   
+</head>  
+<body>  
+    <div id = "frm">  
+        <h1>Login</h1>  
+        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+            <p>  
+                <label> UserName: </label>  
+                <input type = "text" id ="user" name  = "user" />  
+            </p>  
+            <p>  
+                <label> Password: </label>  
+                <input type = "password" id ="pass" name  = "pass" />  
+            </p>  
+            <p>     
+                <input type =  "submit" id = "btn" value = "Login" />  
+            </p>  
+        </form>  
+    </div>  
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>
+</body>     
+</html>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,30 +87,36 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">
                                             <div class="form-group">
-                                                <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                                <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Enter email address" />
+                                                <label class="small mb-1" for="user">Username</label>
+                                                <input class="form-control py-4" name="user" id="user" type="text" placeholder="Enter Username" />
                                             </div>
                                             <div class="form-group">
-                                                <label class="small mb-1" for="inputPassword">Password</label>
-                                                <input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" />
+                                                <label class="small mb-1" for="pass">Password</label>
+                                                <input class="form-control py-4" name="pass" id="pass" type="password" placeholder="Enter password" />
                                             </div>
+<!--
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
                                                     <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
                                                     <label class="custom-control-label" for="rememberPasswordCheck">Remember password</label>
                                                 </div>
                                             </div>
+-->
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="password.html">Forgot Password?</a>
-                                                <a class="btn btn-primary" href="index.html">Login</a>
+<!--                                                <a class="small" href="password.html">Forgot Password?</a>-->
+<!--                                                <a class="btn btn-primary" href>Login</a>-->
+                                                <input class="btn btn-primary" type ="submit" id = "btn" value = "Login" />  
                                             </div>
                                         </form>
                                     </div>
                                     <div class="card-footer text-center">
-                                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
+<!--
+                                        <div class="small">
+                                            <a href="register.html">Need an account? Sign up!</a></div>
                                     </div>
+-->
                                 </div>
                             </div>
                         </div>
@@ -68,5 +141,29 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
+        
+        
+        <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>
     </body>
 </html>
