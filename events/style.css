@@ -1,147 +1,165 @@
-
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
-html{
-    font-size: 62.5%;
-    font-family: "Quicksand", sans-serif;
-    box-sizing: border-box;
+html {
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
 }
-.main{
-    display:grid;
-    grid-template-columns:repeat(1,minmax(350px,1080px));
-    justify-content: center;
-    margin:0 0.5cm;
-} 
+.main {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(350px, 1080px));
+  justify-content: center;
+  margin: 0 0.5cm;
+}
 
 /*HEADINGS*/
 .heading {
-    margin-bottom: 6rem;
-    text-align: center;
+  margin-bottom: 60px;
+  text-align: center;
 }
-.heading h1{
-    font-size: 5rem;
-    color:#37517e;
+.heading h1 {
+  font-size: 50px;
+  color: #37517e;
 }
-.heading h3{
-    font-size:2rem;
-    color:crimson;
-    margin-bottom: 6rem;
+.heading h3 {
+  font-size: 20px;
+  color: crimson;
+  margin-bottom: 60px;
 }
-.heading h3::before{
-    content:"-----------------------------------------------";
-    color:#47b2e4;
-    position:relative;
-    letter-spacing:-1px;
-    padding:2px;
-    top:9px;
+.heading h3::before {
+  content: "-------------------------------------------";
+  color: #47b2e4;
+  position: relative;
+  letter-spacing: -1px;
+  padding: 2px;
+  top: 9px;
 }
-.heading h3::after{
-    content:" -----------------------------------------------";
-    color:#47b2e4;
-    position:relative;
-    letter-spacing:-1px;
-    top:9px;
+.heading h3::after {
+  content: "-------------------------------------------";
+  color: #47b2e4;
+  position: relative;
+  letter-spacing: -1px;
+  top: 9px;
 }
-.heading p{
-    margin-top:30px;
-    font-size:1.8rem;
-    color:rgb(54, 54, 54);
-    margin-bottom: 6rem;
+.heading p {
+  margin-top: 30px;
+  font-size: 18px;
+  color: rgb(54, 54, 54);
+  margin-bottom: 6rem;
 }
 
 /*MAIN CONTENT*/
 .events {
-    list-style: none;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,500px));
-    grid-gap:3rem 6.5rem;
+  list-style: none;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+  grid-gap: 30px 65px;
 }
-.eventcard{
-    width:100%;
-    height:300px;
-    background-size: 120%;
-    background-position: center;
-    text-align: center;
-    border: 1px solid rgb(236, 236, 236);
-    border-radius: 3rem;
-    box-shadow: 0px 23px 30px 0 rgb(105, 105, 105);
-    overflow:hidden;
-    transition: background-size 0.8s;
-    transition-timing-function: ease-out;
+.eventcard {
+  width: 100%;
+  height: 300px;
+  background-size: 120%;
+  background-position: center;
+  text-align: center;
+  border: 1px solid rgb(236, 236, 236);
+  border-radius: 30px;
+  box-shadow: 0px 23px 30px 0 rgb(105, 105, 105);
+  overflow: hidden;
+  transition: background-size 0.8s;
+  transition-timing-function: ease-out;
 }
 .e1 {
-    background-image: url("../assets/img/eventImages/webinar.png");
-    background-position: top;
+  background-image: url("../assets/img/eventImages/webinar.png");
 }
+
 .e2 {
-    background-image: url("../assets/img/eventImages/codewar.jpg");
+  background-image: url("../assets/img/eventImages/codewar.jpg");
 }
 
 .e3 {
-
-    background-image: url("../assets/img/eventImages/electromani.jpg");
+  background-image: url("../assets/img/eventImages/electromani.jpg");
 }
-
 .e4 {
-    background-image: url("../assets/img/eventImages/roboboxing.jpg");
+  background-image: url("../assets/img/eventImages/roboboxing.jpg");
 }
-
 .e5 {
-    background-image: url("../assets/img/eventImages/robosoccer.jpeg");
-    background-position:bottom;
+  background-image: url("../assets/img/eventImages/robosoccer.jpeg");
+  background-position: bottom;
+}
+.e6 {
+  background-image: url("../assets/img/eventImages/gaming.jpg");
+}
+.txt {
+  height: 100%;
+  color: white;
+  position: relative;
+  top: -100%;
+  transition: top 0.8s;
+  background: linear-gradient(black, rgba(0, 0, 0, 0));
+}
+.txt h4 {
+  height: 30%;
+  font-size: 40px;
+  font-weight: bold;
+}
+.txt div {
+  height: 42%;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+}
+.txt p {
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+  margin: 0;
+}
+.btn {
+  display: inline-block;
+  background: rgba(58, 135, 165, 0.8);
+  text-decoration: none;
+  font-size: 18px;
+  width: 130px;
+  border-radius: 15px;
+  color: white;
+  padding: 0;
 }
 
-.e6 {
-    background-image: url("../assets/img/eventImages/gaming.jpg");
+.eventcard:hover .txt {
+  top: 0%;
 }
-.txt{
-    height:100%;
-    color:white;
-    position:relative;
-    top:-100%;
-    transition: top 0.8s;
-    background:linear-gradient(black,rgba(0,0,0,0)) ;
-}
-.txt h4{
-    height:30%;
-    font-size: 3.4rem;
-    font-weight: bold;
-}
-.txt p{
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-.txt a{
-    display:inline-block;
-    background:rgba(58, 135, 165, 0.5);
-    text-decoration:none;
-    font-size:1.8rem;
-    width:130px;
-    border-radius:10px;
-    color:white;
-    margin-top:10px;
-}
-.eventcard:hover .txt{
-    top:0%;
-    
-}
-.eventcard:hover{
-    background-size:128%;
+.eventcard:hover {
+  background-size: 128%;
 }
 
 /*RESPONSIVE RULES*/
-@media screen and (max-width:600px){
-    .eventcard{
-        height:255px;
-        /* grid-template-columns:1fr; */
-    }
-    html{
-        font-size:53%;
-    }
-    .heading p{
-        margin:30px 50px;
-    }
+@media screen and (max-width: 600px) {
+  .eventcard {
+    height: 220px;
+    width: 350px;
+    margin: auto;
+  }
+
+  .heading p {
+    margin: 30px 50px;
+  }
+  .txt h4 {
+    height: 30%;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  .txt div {
+    height: 43%;
+    font-size: 16px;
+  }
+  .txt p {
+    margin: 0;
+    font-size: 16px;
+  }
+  .btn {
+    height: 25px;
+    font-size: 15px;
+  }
 }
