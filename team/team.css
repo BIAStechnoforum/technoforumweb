@@ -31,3 +31,52 @@
     display: list-item;
   }
 }
+
+
+.cards
+{
+  height: 230px;
+  width: 100%;
+}
+.cards .member
+{
+  height: 100%;
+}
+.cards .member .social a:hover i 
+{
+    transform: scale(1.1); 
+}
+.cards .member .social a:hover 
+{
+    transition: ease-in-out 0.3s;
+    transform: translateY(-2px);
+    background: #47b2e4;
+}
+
+.cards .member .pic
+{
+  width: 30% !important;
+}
+.cards .member .member-info
+{
+  width: 70%;
+}
+.img-fluid
+{
+  height: 150px !important;
+  width: 150px !important;
+}
+.cards .member .social{
+  margin: 5px 0 7px 0;
+}
+@media (max-width: 575px) 
+{
+  .cards{
+    height: 100%;
+  }
+  .img-fluid
+{
+  height: auto !important;
+  width: auto !important;
+}
+}
