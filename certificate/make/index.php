@@ -96,15 +96,15 @@ if (!isset($_SESSION['loggedin'])) {
                 <div class="form-row">
                   <div class="form-group col-md-4">
                     <label for="awardedTo">Awarded to</label>
-                    <input type="text" class="form-control" name="awardedTo" id="awardedTo" placeholder="Enter the Awardee's Name" value="Test">
+                    <input type="text" class="form-control" name="awardedTo" id="awardedTo" placeholder="Enter the Awardee's Name" value="">
                   </div>
                   <div class="form-group col-md-4">
                     <label for="position">Position</label>
-                    <input type="text" class="form-control" name="position" id="position" placeholder="Enter the Position" value="Test">
+                    <input type="text" class="form-control" name="position" id="position" placeholder="Enter the Position" value="">
                   </div>
                   <div class="form-group col-md-4">
                     <label for="competitionName">Competition Name</label>
-                    <input type="text" class="form-control" name="competitionName" id="competitionName" placeholder="Enter the Competition Name" value="Test">
+                    <input type="text" class="form-control" name="competitionName" id="competitionName" placeholder="Enter the Competition Name" value="">
                   </div>
                 </div>
                 <div class="form-row">
