@@ -132,7 +132,9 @@ html {
 .projectcard:hover {
   background-size: 128%;
 }
-
+.projlink {
+  color: red;
+}
 /*RESPONSIVE RULES*/
 @media screen and (max-width: 600px) {
   .projectcard {
