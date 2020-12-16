@@ -8,7 +8,7 @@ $json['post'] = $post;
 if (!empty($post['action']) && $post['action']=="generateCertificate") {
     $name = $post['awardedTo'];
     $position = $post['position'];
-    $competitionName = mysql_escape_string($post['competitionName']);
+    $competitionName = $post['competitionName'];
     $competitionDate = date('d-M-Y', strtotime($post['competitionDate']));
     $certificateId = $post['certificateId'];
     $imageName = time() . '.jpg';
