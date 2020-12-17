@@ -2,14 +2,15 @@
 session_start();
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
 
-// Load Composer's autoloader
-require_once $_SERVER['DOCUMENT_ROOT'] . '/certificate/make/PHPMailer/PHPMailer.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/certificate/make/PHPMailer/SMTP.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/certificate/make/PHPMailer/Exception.php';
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\SMTP;
+// use PHPMailer\PHPMailer\Exception;
+//
+// // Load Composer's autoloader
+// require_once $_SERVER['DOCUMENT_ROOT'] . '/certificate/make/PHPMailer/PHPMailer.php';
+// require_once $_SERVER['DOCUMENT_ROOT'] . '/certificate/make/PHPMailer/SMTP.php';
+// require_once $_SERVER['DOCUMENT_ROOT'] . '/certificate/make/PHPMailer/Exception.php';
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/db/config.php';
 $post = $_POST;
@@ -130,27 +131,27 @@ if (!empty($post['action']) && $post['action']=="generateCertificate") {
         $pdf->Image($file_path, 0, 0, 210, 150);
         $pdf->Output($file_path_pdf, "F");
 
-        $mail=new PHPMailer(true);
-        $mail->isSMTP();
-        $mail->Host='mail.birlainstitute.co.in';
-        $mail->Port=465;
-        $mail->SMTPSecure="tls";
-        $mail->SMTPAuth=true;
-        $mail->Username=$senderEmailId;
-        $mail->Password=$senderEmailPass;
-        $mail->setFrom($senderEmailId);
-        $mail->addAddress($studentEmailId);
-        $mail->isHTML(true);
-        $mail->Subjet="Certificate Generated";
-        $mail->Body="Certificate Generated";
-        $mail->addAttachment($file_path_pdf);
-        $mail->SMTPOptions=array("ssl"=>array(
-            "verify_peer"=>false,
-            "verify_peer_name"=>false,
-            "allow_self_signed"=>false,
-        ));
+        // $mail=new PHPMailer(true);
+        // $mail->isSMTP();
+        // $mail->Host='mail.birlainstitute.co.in';
+        // $mail->Port=465;
+        // $mail->SMTPSecure="tls";
+        // $mail->SMTPAuth=true;
+        // $mail->Username=$senderEmailId;
+        // $mail->Password=$senderEmailPass;
+        // $mail->setFrom($senderEmailId);
+        // $mail->addAddress($studentEmailId);
+        // $mail->isHTML(true);
+        // $mail->Subjet="Certificate Generated";
+        // $mail->Body="Certificate Generated";
+        // $mail->addAttachment($file_path_pdf);
+        // $mail->SMTPOptions=array("ssl"=>array(
+        //     "verify_peer"=>false,
+        //     "verify_peer_name"=>false,
+        //     "allow_self_signed"=>false,
+        // ));
 
-        
+
         // if ($mail->send()) {
         //     $json['mail-status'] = "Sent!";
         // } else {
