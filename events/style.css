@@ -116,7 +116,8 @@ html {
   font-weight: bold;
   margin: 0;
 }
-.btn {
+.btn,
+.details {
   display: inline-block;
   background: rgba(58, 135, 165, 0.8);
   text-decoration: none;
@@ -125,8 +126,13 @@ html {
   border-radius: 15px;
   color: white;
   padding: 0;
+  height: 28px;
+  margin: 0 10px;
 }
-
+.details:hover {
+  color: white;
+  background: rgba(0, 81, 255, 0.7);
+}
 .eventcard:hover .txt {
   top: 0%;
 }
