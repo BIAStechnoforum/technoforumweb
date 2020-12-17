@@ -96,25 +96,29 @@ session_start();
                 <div class="form-row">
                   <div class="form-group col-md-4">
                     <label for="awardedTo">Awarded to</label>
-                    <input type="text" class="form-control" name="awardedTo" id="awardedTo" placeholder="Enter the Awardee's Name" value="">
+                    <input type="text" class="form-control" name="awardedTo" id="awardedTo" placeholder="Enter the Awardee's Name" value="" required>
                   </div>
                   <div class="form-group col-md-4">
                     <label for="position">Position</label>
-                    <input type="text" class="form-control" name="position" id="position" placeholder="Enter the Position" value="">
+                    <input type="text" class="form-control" name="position" id="position" placeholder="Enter the Position" value="" required>
                   </div>
                   <div class="form-group col-md-4">
                     <label for="competitionName">Competition Name</label>
-                    <input type="text" class="form-control" name="competitionName" id="competitionName" placeholder="Enter the Competition Name" value="">
+                    <input type="text" class="form-control" name="competitionName" id="competitionName" placeholder="Enter the Competition Name" value="" required>
                   </div>
                 </div>
                 <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="certificateId">Certificate ID</label>
-                    <input type="text" class="form-control" name="certificateId" id="certificateId" placeholder="Enter the Certificate Id" value="">
+                  <div class="form-group col-md-4">
+                    <label for="email">Email Id</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email Id" value="" required>
                   </div>
-                  <div class="form-group col-md-6">
+                  <div class="form-group col-md-4">
+                    <label for="certificateId">Certificate ID</label>
+                    <input type="text" class="form-control" name="certificateId" id="certificateId" placeholder="Enter the Certificate Id" value="" required>
+                  </div>
+                  <div class="form-group col-md-4">
                     <label for="competitionDate">Competition Date</label>
-                    <input type="date" class="form-control" name="competitionDate" id="competitionDate" placeholder="Enter the Competition Date" value="">
+                    <input type="date" class="form-control" name="competitionDate" id="competitionDate" placeholder="Enter the Competition Date" value="" required>
                   </div>
                 </div>
                 <input type="hidden" name="action" value="generateCertificate">
