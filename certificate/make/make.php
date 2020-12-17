@@ -149,11 +149,15 @@ if (!empty($post['action']) && $post['action']=="generateCertificate") {
             "verify_peer_name"=>false,
             "allow_self_signed"=>false,
         ));
-        if ($mail->send()) {
-            $json['mail-status'] = "Sent!";
-        } else {
-            $json['mail-status'] = $mail->ErrorInfo;
-        }
+
+        
+        // if ($mail->send()) {
+        //     $json['mail-status'] = "Sent!";
+        // } else {
+        //     $json['mail-status'] = $mail->ErrorInfo;
+        // }
+
+
     } else {
         $json['status'] = 'failed';
     }
