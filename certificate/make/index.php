@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (!isset($_SESSION['loggedin'])) {
-  header('Location: /');
-  exit;
-}
+// if (!isset($_SESSION['loggedin'])) {
+//   header('Location: /');
+//   exit;
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
