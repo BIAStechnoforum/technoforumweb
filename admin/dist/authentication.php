@@ -17,8 +17,8 @@
 
         if($count == 1){
             $_SESSION['loggedin'] = true;
-            header("Location: /certificate/make", true, 301);
-            exit();
+            header("Location: /certificate/make");
+            exit;
         }
         else{
             echo "<h1> Login failed. Invalid username or password.</h1>";
