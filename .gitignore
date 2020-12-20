@@ -3,3 +3,5 @@
 cgi-bin
 .well-known
 .env.php
+certificates/
+pdfs/
