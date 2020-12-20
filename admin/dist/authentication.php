@@ -17,7 +17,7 @@
           
         if($count == 1){
             $_SESSION['loggedin'] = true;
-            header("Location:http://techno.birlainstitute.co.in/certificate/make", true, 301);
+            header("Location:http://techno.birlainstitute.co.in/certificate/make");
             exit();
         }  
         else{  
