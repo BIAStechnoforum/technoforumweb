@@ -19,8 +19,7 @@
             $_SESSION['loggedin'] = true;
             header("Location: /certificate/make");
             exit;
-        }
-        else{
+        } else {
             echo "<h1> Login failed. Invalid username or password.</h1>";
         }
 ?>

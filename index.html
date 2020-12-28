@@ -15,9 +15,7 @@
   <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -66,8 +64,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
-          data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
           <h1>Let's learn, imagine, and build</h1>
           <!-- <h2>We are a community of talanted engineers making better things with Technology</h2> -->
           <div class="d-lg-flex">
@@ -159,56 +156,18 @@
                   <th scope="col">Date</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Webinar on Android Development by Saurav Kumar</td>
-                  <td>02 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Webinar on Need of Green Computing by Tanmay Singh</td>
-                  <td>04 Dec 2020</td>
-                </tr>
+              <tbody class="events">
 
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Welcome to the world of Data Science (competition) organized by Aditi Sahni and Aman Singh Bisht
-                  </td>
-                  <td>06 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td>World of Output (competition) organized by Nidhi Sah and Dipesh Rawat</td>
-                  <td>09 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>Webinar on C programming by Himadri Tripathi</td>
-                  <td>11 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">6</th>
-                  <td>ESportX (gaming competition)</td>
-                  <td>13 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">7</th>
-                  <td>Webinar on Web Development by Karan Joshi and Shivani Joshi</td>
-                  <td>15 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">8</th>
-                  <td>Geek O' Pedia (competition) organized by Manya Sah and Anuj Mehra</td>
-                  <td>17 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">9</th>
-                  <td>Debug your soul (competition) organized by Abhay Dumka and Durgesh Pandey</td>
-                  <td>19 Dec 2020</td>
-                </tr>
               </tbody>
             </table>
+
+            <div class="events-template d-none">
+              <etr>
+                <eth scope="row">{{id}}</eth>
+                <etd>{{eventName}}</etd>
+                <etd>{{date}}</etd>
+              </etr>
+            </div>
 
           </div>
 
@@ -777,27 +736,23 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
-                    data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validate"></div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" data-rule="email"
-                    data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4"
-                  data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" data-rule="required"
-                  data-msg="Please write something for us"></textarea>
+                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
@@ -918,6 +873,8 @@
 
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
+
+  <script src="assets/js/events-fetch.js" charset="utf-8"></script>
 
 </body>
 
