@@ -1,9 +1,24 @@
 <?php
 session_start();
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\SMTP;
+// use PHPMailer\PHPMailer\Exception;
+//
+// // Load Composer's autoloader
+// require_once $_SERVER['DOCUMENT_ROOT'] . '/certificate/make/PHPMailer/PHPMailer.php';
+// require_once $_SERVER['DOCUMENT_ROOT'] . '/certificate/make/PHPMailer/SMTP.php';
+// require_once $_SERVER['DOCUMENT_ROOT'] . '/certificate/make/PHPMailer/Exception.php';
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/db/config.php';
 $post = $_POST;
 $json = array();
 $json['post'] = $post;
+
+$senderEmailId = 'techno_forum@birlainstitute.co.in';
+$senderEmailPass = '7Z57wy2xn)5z';
 
 if (!empty($post['action']) && $post['action']=="generateCertificate") {
     $name = $post['awardedTo'];
@@ -11,11 +26,26 @@ if (!empty($post['action']) && $post['action']=="generateCertificate") {
     $competitionName = $post['competitionName'];
     $competitionDate = date('d-M-Y', strtotime($post['competitionDate']));
     $certificateId = $post['certificateId'];
-    $imageName = time() . '.jpg';
+    $studentEmailId = $post['email'];
+    $imageName = $certificateId . '.jpg';
     $created_at = time();
 
-    $sql = "INSERT INTO certificates (certificate_id, image, awarded_to, comp_name, comp_date, position, created_at) VALUES ('$certificateId', '$imageName', '$name', '$competitionName', '$competitionDate', '$position', '$created_at')";
-    $res = mysqli_query($link, $sql);
+    $sql = "INSERT INTO certificates (certificate_id, image, awarded_to, comp_name, comp_date, position, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    if ($stmt = mysqli_prepare($link, $sql)) {
+        // Bind variables to the prepared statement as parameters
+        mysqli_stmt_bind_param($stmt, "sssssss", $certificateId, $imageName, $name, $competitionName, $competitionDate, $position, $created_at);
+
+        // Attempt to execute the prepared statement
+        if ($res = mysqli_stmt_execute($stmt)) {
+            // Store result
+            mysqli_stmt_store_result($stmt);
+        } else {
+            $json['msg'] =  "Oops! Something went wrong. Please try again later.";
+        }
+
+        // Close statement
+        mysqli_stmt_close($stmt);
+    }
 
     if ($res) {
         $nameFont="./Anton-Regular.ttf";
@@ -90,8 +120,47 @@ if (!empty($post['action']) && $post['action']=="generateCertificate") {
 
         $json['image'] = $imageName;
         $json['status'] = 'success';
+
+        $file_path = '../certificates/' . $imageName;
+        $file_path_pdf = '../pdfs/' . str_replace('jpg', 'pdf', $imageName);
+
+        // GENERATE PDF
+        require('fpdf.php');
+        $pdf=new FPDF();
+        $pdf->AddPage();
+        $pdf->Image($file_path, 0, 0, 210, 150);
+        $pdf->Output($file_path_pdf, "F");
+
+        // $mail=new PHPMailer(true);
+        // $mail->isSMTP();
+        // $mail->Host='mail.birlainstitute.co.in';
+        // $mail->Port=465;
+        // $mail->SMTPSecure="tls";
+        // $mail->SMTPAuth=true;
+        // $mail->Username=$senderEmailId;
+        // $mail->Password=$senderEmailPass;
+        // $mail->setFrom($senderEmailId);
+        // $mail->addAddress($studentEmailId);
+        // $mail->isHTML(true);
+        // $mail->Subjet="Certificate Generated";
+        // $mail->Body="Certificate Generated";
+        // $mail->addAttachment($file_path_pdf);
+        // $mail->SMTPOptions=array("ssl"=>array(
+        //     "verify_peer"=>false,
+        //     "verify_peer_name"=>false,
+        //     "allow_self_signed"=>false,
+        // ));
+
+
+        // if ($mail->send()) {
+        //     $json['mail-status'] = "Sent!";
+        // } else {
+        //     $json['mail-status'] = $mail->ErrorInfo;
+        // }
+
+
     } else {
-      $json['status'] = 'failed';
+        $json['status'] = 'failed';
     }
 
     $json['link'] = $link;

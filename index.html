@@ -10,7 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/assets/img/favicon.png" rel="icon">
+  <!-- <link href="/assets/img/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
   <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -36,7 +37,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="/">Techno Forum</a></h1>
+      <h1 class="logo mr-auto"><a href="/">technoforum</a></h1>
       <!-- <a href="/" class="logo mr-auto"><img src="/assets/img/favicon.png" alt="" class="img-fluid"></a> -->
 
       <nav class="nav-menu d-none d-lg-block">
@@ -46,7 +47,7 @@
           <li><a href="/events">Events</a></li>
           <li><a href="/news-and-announcements">News & Announcements</a></li>
           <li><a href="/team">Team</a></li>
-          <li><a href="/alumni">Alumni</a></li>
+          <li><a href="/certificate/verify/">Verify</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/about">About</a></li>
 
@@ -107,8 +108,11 @@
         <div class="row content">
           <div class="col-lg-6">
             <p>
-              Technoforum is the tech society of Birla Institute of Applied Sciences. It aims to provide students with a platform to stand and thrive in a world full of technology.
-              It is committed to helping every student to achieve more. Whether a beginner or an advanced learner, it brings opportunities for everyone to gain knowledge by organizing events, interactive session by foreign professors and industry
+              Technoforum is the tech society of Birla Institute of Applied Sciences. It aims to provide students with a
+              platform to stand and thrive in a world full of technology.
+              It is committed to helping every student to achieve more. Whether a beginner or an advanced learner, it
+              brings opportunities for everyone to gain knowledge by organizing events, interactive session by foreign
+              professors and industry
               experts, and by providing information about upcoming technologies.
 
 
@@ -121,7 +125,9 @@
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Technoforum brings different technology-related fields like AI, robotics, web development under the same roof. We engage every student’s experiences, strengths, and various points of view to inform, challenge, and stretch our thinking.
+              Technoforum brings different technology-related fields like AI, robotics, web development under the same
+              roof. We engage every student’s experiences, strengths, and various points of view to inform, challenge,
+              and stretch our thinking.
               Its mission is to educate, inform, and encourage all emerging technology enthusiasts.
             </p>
             <a href="/events" class="btn-learn-more">Check our Events</a>
@@ -150,55 +156,18 @@
                   <th scope="col">Date</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Webinar on Android Development by Saurav Kumar</td>
-                  <td>02 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Webinar on Need of Green Computing by Tanmay Singh</td>
-                  <td>04 Dec 2020</td>
-                </tr>
+              <tbody class="events">
 
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Welcome to the world of Data Science (competition) organized by Aditi Sahni and Aman Singh Bisht</td>
-                  <td>06 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td>World of Output (competition) organized by Nidhi Sah and Dipesh Rawat</td>
-                  <td>09 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>Webinar on C programming by Himadri Tripathi</td>
-                  <td>11 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">6</th>
-                  <td>ESportX (gaming competition)</td>
-                  <td>13 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">7</th>
-                  <td>Webinar on Web Development by Karan Joshi and Shivani Joshi</td>
-                  <td>15 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">8</th>
-                  <td>Geek O' Pedia (competition) organized by Manya Sah and Anuj Mehra</td>
-                  <td>17 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">9</th>
-                  <td>Debug your soul (competition) organized by Abhay Dumka and Durgesh Pandey</td>
-                  <td>19 Dec 2020</td>
-                </tr>
               </tbody>
             </table>
+
+            <div class="events-template d-none">
+              <etr>
+                <eth scope="row">{{id}}</eth>
+                <etd>{{eventName}}</etd>
+                <etd>{{date}}</etd>
+              </etr>
+            </div>
 
           </div>
 
@@ -361,7 +330,8 @@
         <div class="row">
           <div class="col-lg-9 text-center text-lg-left">
             <h3>Exploring Technologies</h3>
-            <p> Classroom teaching is often restricted, due to the completion of the syllabus on time. Webinars help fill this void by specifying a time to teach on those technologies.
+            <p> Classroom teaching is often restricted, due to the completion of the syllabus on time. Webinars help
+              fill this void by specifying a time to teach on those technologies.
             </p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
@@ -749,11 +719,11 @@
                 <p>techno@birlainstitute.co.in</p>
               </div>
 
-              <div class="phone">
+              <!-- <div class="phone">
                 <i class="icofont-phone"></i>
                 <h4>Call:</h4>
                 <p>+91 9876543210</p>
-              </div>
+              </div> -->
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.4797951963023!2d79.55189711557207!3d29.356237682137927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a099dbdc0befa7%3A0xa08407c1dac1f3ac!2sBirla%20Institute%20of%20Applied%20Sciences%2C%20Bhimtal-263136%20(Uttarakhand)!5e0!3m2!1sen!2sin!4v1603129991902!5m2!1sen!2sin"
                 frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
@@ -824,18 +794,18 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Techno forum</h3>
+          <div class="col-lg col-md-6 footer-contact">
+            <h3>Technoforum</h3>
             <p>
               Technoforum Society<br>
               BIAS, Bhimtal, Nanital 263136<br>
               Uttarakhand <br><br>
-              <strong>Phone:</strong> +91 9876543210<br>
+              <!-- <strong>Phone:</strong> +91 9876543210<br> -->
               <strong>Email:</strong> techno@birlainstitute.co.in<br>
             </p>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <!-- <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Projects</a></li>
@@ -844,9 +814,9 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Contact us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
             </ul>
-          </div>
+          </div> -->
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <div class="col-lg col-md-6 footer-links">
             <h4>Our Fields</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
@@ -857,17 +827,17 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <div class="col-lg col-md-6 footer-links">
             <h4>Our Social Networks</h4>
             <p>Technoforum is a professional , non-profit , Technical Society of Birla Institute of Applied Sciences ,
               Bhimtal. First established in 2007 , with a view to enlarge the activities to advance the cause of
-              technological education in the institute. Techno-Forum has an active membership of more than 200 in the
+              technological education in the institute. TechnoForum has an active membership of more than 200 in the
               institute itself.</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
@@ -881,7 +851,7 @@
         &copy; Copyright <strong><span>Technoforum</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed by <a href="/team">TF Web Dev Team</a>
+        Designed by <a href="/team">Technoforum Web Dev Team</a>
       </div>
     </div>
   </footer>
@@ -903,6 +873,8 @@
 
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
+
+  <script src="/assets/js/events-fetch.js" charset="utf-8"></script>
 
 </body>
 

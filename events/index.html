@@ -1,4 +1,4 @@
-zz<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,7 +10,9 @@ zz<!DOCTYPE html>
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/assets/img/favicon.png" rel="icon">
+  <!-- <link href="/assets/img/favicon.png" rel="icon"> -->
+  <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+
   <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -43,7 +45,7 @@ zz<!DOCTYPE html>
     <div class="container d-flex align-items-center">
 
       <!-- TEXT ICON -->
-      <h1 class="logo mr-auto"><a href="/">Techno Forum</a></h1>
+      <h1 class="logo mr-auto"><a href="/">TechnoForum</a></h1>
 
       <!-- IMAGE ICON -->
       <!-- <a href="/" class="logo mr-auto"><img src="assets/img/favicon.png" alt="" class="img-fluid"></a> -->
@@ -55,7 +57,7 @@ zz<!DOCTYPE html>
           <li class="active"><a href="/events">Events</a></li>
           <li><a href="/news-and-announcements">News & Announcements</a></li>
           <li><a href="/team">Team</a></li>
-          <li><a href="/alumni">Alumni</a></li>
+          <li><a href="/certificate/verify/">Verify</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/about">About</a></li>
 
@@ -93,60 +95,24 @@ zz<!DOCTYPE html>
             <table class="table table-hover" style="font-size: initial;">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Descriptions</th>
-                  <th scope="col">Date</th>
+                  <th>#</th>
+                  <th>Descriptions</th>
+                  <th>Date</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Webinar on Android Development by Saurav Kumar</td>
-                  <td>02 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Webinar on Need of Green Computing by Tanmay Singh</td>
-                  <td>04 Dec 2020</td>
-                </tr>
+              <tbody class="events">
 
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Welcome to the world of Data Science (competition) organized by Aditi Sahni and Aman Singh Bisht</td>
-                  <td>06 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td>World of Output (competition) organized by Nidhi Sah and Dipesh Rawat</td>
-                  <td>09 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>Webinar on C programming by Himadri Tripathi</td>
-                  <td>11 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">6</th>
-                  <td>ESportX (gaming competition)</td>
-                  <td>13 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">7</th>
-                  <td>Webinar on Web Development by Karan Joshi and Shivani Joshi</td>
-                  <td>15 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">8</th>
-                  <td>Geek O' Pedia (competition) organized by Manya Sah and Anuj Mehra</td>
-                  <td>17 Dec 2020</td>
-                </tr>
-                <tr>
-                  <th scope="row">9</th>
-                  <td>Debug your soul (competition) organized by Abhay Dumka and Durgesh Pandey</td>
-                  <td>19 Dec 2020</td>
-                </tr>
               </tbody>
             </table>
+
+            <div class="events-template d-none">
+              <etr>
+                <eth>{{id}}</eth>
+                <etd>{{eventName}}</etd>
+                <etd>{{date}}</etd>
+              </etr>
+            </div>
+
           </div>
 
 
@@ -157,7 +123,8 @@ zz<!DOCTYPE html>
                 <div class="eventcard e1">
                   <div class="txt">
                     <h4>Webinar</h4>
-                    <div>Learning from the same individual in the same style often gets boring. It's believed knowledge is
+                    <div>Learning from the same individual in the same style often gets boring. It's believed knowledge
+                      is
                       best learned when things are shaken. Webinars are one of the ways to do so.
                       Interacting with teachers and students from other colleges let you explore how the one you are
                       going to compete against are being trained. Often we are restricted to the knowledge by the
@@ -177,7 +144,8 @@ zz<!DOCTYPE html>
                 <div class="eventcard e2">
                   <div class="txt">
                     <h4>Code Wars</h4>
-                    <div>Coding is one of the things that is easy to do. Even if you get stuck you can google the code for
+                    <div>Coding is one of the things that is easy to do. Even if you get stuck you can google the code
+                      for
                       a solution. There is no fun in that.
                       The fun comes when you compete against the best to find the most optimized solutions. Coding
                       becomes interesting, cause in a limited time you got to find the optimized solution without the
@@ -198,7 +166,8 @@ zz<!DOCTYPE html>
                 <div class="eventcard e3">
                   <div class="txt">
                     <h4>Electromania</h4>
-                    <div>Building your own IoT devices, robots, and other electronic-based products are good. It is in the
+                    <div>Building your own IoT devices, robots, and other electronic-based products are good. It is in
+                      the
                       real-world that the strength of the product is tested and what other places to know the drawbacks
                       than a competition of such
                       unique ideas and products.
@@ -218,7 +187,15 @@ zz<!DOCTYPE html>
                 <div class="eventcard e4">
                   <div class="txt">
                     <h4>Robo Boxing</h4>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores commodi, voluptate cum voluptates ratione veritatis eum eos eaque? Repellendus culpa molestias esse sint, nulla illum numquam sit atque voluptates eaque ea nemo ipsa odio temporibus dolorum deserunt, ratione facere voluptate maiores! Consequuntur tenetur et qui autem voluptatibus aliquam distinctio, voluptatum molestias vero fugiat numquam tempora repellendus eum perspiciatis itaque veniam dolores nesciunt quam eligendi voluptas consequatur! Corporis voluptate tempora illo dolore. Impedit deleniti dolorum beatae? Veniam magnam maxime quisquam saepe sint ad praesentium deserunt quod, delectus reiciendis dolore rem voluptatem perspiciatis pariatur, ab perferendis alias. Laborum sapiente eveniet suscipit animi?
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores commodi, voluptate cum
+                      voluptates ratione veritatis eum eos eaque? Repellendus culpa molestias esse sint, nulla illum
+                      numquam sit atque voluptates eaque ea nemo ipsa odio temporibus dolorum deserunt, ratione facere
+                      voluptate maiores! Consequuntur tenetur et qui autem voluptatibus aliquam distinctio, voluptatum
+                      molestias vero fugiat numquam tempora repellendus eum perspiciatis itaque veniam dolores nesciunt
+                      quam eligendi voluptas consequatur! Corporis voluptate tempora illo dolore. Impedit deleniti
+                      dolorum beatae? Veniam magnam maxime quisquam saepe sint ad praesentium deserunt quod, delectus
+                      reiciendis dolore rem voluptatem perspiciatis pariatur, ab perferendis alias. Laborum sapiente
+                      eveniet suscipit animi?
                     </div>
                     <p>.......</p>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#robomodal">
@@ -231,7 +208,15 @@ zz<!DOCTYPE html>
                 <div class="eventcard e5">
                   <div class="txt">
                     <h4>Robo Soccer</h4>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ex velit distinctio similique architecto temporibus aut odit ducimus voluptates dolores. Cupiditate totam quos voluptas beatae, facilis itaque? Eaque consectetur, earum porro nostrum aliquid maiores itaque vel facilis suscipit dolor dolore nesciunt eius recusandae quibusdam, ipsa ab pariatur et. Libero doloribus ab obcaecati neque temporibus incidunt, quidem modi ut veritatis velit aliquam? Inventore, sit tempore repudiandae nihil molestiae, ut, ducimus magnam culpa possimus hic tenetur repellendus harum ipsam voluptatum. Minus explicabo dignissimos aperiam iure voluptas dolorum, molestias, quas voluptate sint nihil excepturi adipisci odio beatae corporis? Deleniti corrupti laboriosam reiciendis illo?
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ex velit distinctio similique
+                      architecto temporibus aut odit ducimus voluptates dolores. Cupiditate totam quos voluptas beatae,
+                      facilis itaque? Eaque consectetur, earum porro nostrum aliquid maiores itaque vel facilis suscipit
+                      dolor dolore nesciunt eius recusandae quibusdam, ipsa ab pariatur et. Libero doloribus ab
+                      obcaecati neque temporibus incidunt, quidem modi ut veritatis velit aliquam? Inventore, sit
+                      tempore repudiandae nihil molestiae, ut, ducimus magnam culpa possimus hic tenetur repellendus
+                      harum ipsam voluptatum. Minus explicabo dignissimos aperiam iure voluptas dolorum, molestias, quas
+                      voluptate sint nihil excepturi adipisci odio beatae corporis? Deleniti corrupti laboriosam
+                      reiciendis illo?
                     </div>
                     <p>.......</p>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#robosocmodal">
@@ -468,34 +453,33 @@ zz<!DOCTYPE html>
         </div>
       </div>
     </div>
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Techno forum</h3>
+          <div class="col-lg col-md-6 footer-contact">
+            <h3>Technoforum</h3>
             <p>
               Technoforum Society<br>
               BIAS, Bhimtal, Nanital 263136<br>
               Uttarakhand <br><br>
-              <strong>Phone:</strong> +91 9876543210<br>
+              <!-- <strong>Phone:</strong> +91 9876543210<br> -->
               <strong>Email:</strong> techno@birlainstitute.co.in<br>
             </p>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <!-- <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="/projects">Projects</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/events">Events</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/team">Team</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/contact">Contact us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Projects</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Events</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
             </ul>
-          </div>
+          </div> -->
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <div class="col-lg col-md-6 footer-links">
             <h4>Our Fields</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
@@ -506,17 +490,17 @@ zz<!DOCTYPE html>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <div class="col-lg col-md-6 footer-links">
             <h4>Our Social Networks</h4>
             <p>Technoforum is a professional , non-profit , Technical Society of Birla Institute of Applied Sciences ,
               Bhimtal. First established in 2007 , with a view to enlarge the activities to advance the cause of
-              technological education in the institute. Techno-Forum has an active membership of more than 200 in the
+              technological education in the institute. TechnoForum has an active membership of more than 200 in the
               institute itself.</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
@@ -530,7 +514,7 @@ zz<!DOCTYPE html>
         &copy; Copyright <strong><span>Technoforum</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed by <a href="/team">TF Web Dev Team</a>
+        Designed by <a href="/team">Technoforum Web Dev Team</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -551,6 +535,8 @@ zz<!DOCTYPE html>
 
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
+
+  <script src="/assets/js/events-fetch.js" charset="utf-8"></script>
 
 </body>
 
