@@ -2,7 +2,8 @@
     type: 'GET',
     url: 'https://script.google.com/macros/s/AKfycbwUJRQF4zC0HQF5L2HauF1wh_Jn4SJtagdt3mqGRjLWg6fmq28/exec',
     success: function(res) {
-      let eventsTemplateHTML = $.trim($('.events-template').html());
+      console.log(res);
+      eventsTemplateHTML = $.trim($('.events-template').html());
       $.each(res, function(index, obj) {
         var x = eventsTemplateHTML
           .replace(/etr/ig, 'tr')
