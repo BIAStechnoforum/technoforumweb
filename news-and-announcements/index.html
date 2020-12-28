@@ -16,9 +16,7 @@
   <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -87,63 +85,27 @@
         <div class="section-title">
           <h2>December Events</h2>
         </div>
+
         <table class="table table-hover" style="font-size: initial;">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">Descriptions</th>
-              <th scope="col">Date</th>
+              <th>#</th>
+              <th>Descriptions</th>
+              <th>Date</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Webinar on Android Development by Saurav Kumar</td>
-              <td>02 Dec 2020</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Webinar on Need of Green Computing by Tanmay Singh</td>
-              <td>04 Dec 2020</td>
-            </tr>
+          <tbody class="events">
 
-            <tr>
-              <th scope="row">3</th>
-              <td>Welcome to the world of Data Science (competition) organized by Aditi Sahni and Aman Singh Bisht</td>
-              <td>06 Dec 2020</td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>World of Output (competition) organized by Nidhi Sah and Dipesh Rawat</td>
-              <td>09 Dec 2020</td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td>Webinar on C programming by Himadri Tripathi</td>
-              <td>11 Dec 2020</td>
-            </tr>
-            <tr>
-              <th scope="row">6</th>
-              <td>ESportX (gaming competition)</td>
-              <td>13 Dec 2020</td>
-            </tr>
-            <tr>
-              <th scope="row">7</th>
-              <td>Webinar on Web Development by Karan Joshi</td>
-              <td>15 Dec 2020</td>
-            </tr>
-            <tr>
-              <th scope="row">8</th>
-              <td>Geek O' Pedia (competition) organized by Manya Sah and Anuj Mehra</td>
-              <td>17 Dec 2020</td>
-            </tr>
-            <tr>
-              <th scope="row">9</th>
-              <td>Debug your soul (competition) organized by Abhay Dumka and Durgesh Pandey</td>
-              <td>19 Dec 2020</td>
-            </tr>
           </tbody>
         </table>
+
+        <div class="events-template d-none">
+          <etr>
+            <eth>{{id}}</eth>
+            <etd>{{eventName}}</etd>
+            <etd>{{date}}</etd>
+          </etr>
+        </div>
 
       </div>
     </section>
@@ -249,6 +211,8 @@
 
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
+
+  <script src="/assets/js/events-fetch.js"></script>
 
 </body>
 
