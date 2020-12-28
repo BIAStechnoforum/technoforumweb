@@ -12,7 +12,7 @@
           .replace(/{{id}}/ig, (index+1))
           .replace(/{{eventName}}/ig, obj.eventName)
           .replace(/{{date}}/ig, obj.date)
-        $('.events').append(x);
+        $('.eventstable').append(x);
       });
     },
     error: function(xhr, ajaxOptions, thrownError) {
