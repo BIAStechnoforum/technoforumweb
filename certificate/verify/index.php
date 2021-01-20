@@ -43,7 +43,7 @@
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="/">Techno Forum</a></h1>
+      <h1 class="logo mr-auto"><a href="/">TechnoForum</a></h1>
       <!-- <a href="/" class="logo mr-auto"><img src="/assets/img/favicon.png" alt="" class="img-fluid"></a> -->
 
       <nav class="nav-menu d-none d-lg-block">
