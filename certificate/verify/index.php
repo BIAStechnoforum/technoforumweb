@@ -208,7 +208,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Techno forum</h3>
+            <h3>Technoforum</h3>
             <p>
               Technoforum Society<br>
               BIAS, Bhimtal, Nanital 263136<br>
