@@ -1,0 +1,82 @@
+.toggle-pill {
+  -webkit-tap-highlight-color: transparent;
+  text-align: center;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e2e8f0;
+  line-height: 1.2;
+  font-family: "Jost", sans-serif;
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  padding: 5px;
+}
+
+.toggle-ul {
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: #f3f3f3 !important;
+  background-color: #3d4c6a !important;
+}
+
+@media only screen and (min-width:100px) and (max-width:991px) {
+  .toggle-ul {
+    display: list-item;
+  }
+}
+
+
+.cards
+{
+  height: 230px;
+  width: 100%;
+}
+.cards .member
+{
+  height: 100%;
+}
+.cards .member .social a:hover i 
+{
+    transform: scale(1.1); 
+}
+.cards .member .social a:hover 
+{
+    transition: ease-in-out 0.3s;
+    transform: translateY(-2px);
+    background: #47b2e4;
+}
+
+.cards .member .pic
+{
+  width: 30% !important;
+}
+.cards .member .member-info
+{
+  width: 70%;
+}
+.img-fluid
+{
+  height: 150px !important;
+  width: 150px !important;
+}
+.cards .member .social{
+  margin: 5px 0 7px 0;
+}
+@media (max-width: 575px) 
+{
+  .cards{
+    height: 100%;
+  }
+  .img-fluid
+{
+  height: auto !important;
+  width: auto !important;
+}
+}
