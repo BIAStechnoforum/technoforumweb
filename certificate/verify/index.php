@@ -53,7 +53,7 @@
           <li><a href="/events">Events</a></li>
           <li><a href="/news-and-announcements">News & Announcements</a></li>
           <li><a href="/team">Team</a></li>
-          <li><a href="/alumni">Alumni</a></li>
+<!--           <li><a href="/alumni">Alumni</a></li> -->
           <li><a href="/contact">Contact</a></li>
           <li><a href="/about">About</a></li>
 
@@ -188,7 +188,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
-    <div class="footer-newsletter">
+<!--     <div class="footer-newsletter">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
@@ -201,7 +201,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="footer-top">
       <div class="container">
@@ -214,7 +214,7 @@
               BIAS, Bhimtal, Nanital 263136<br>
               Uttarakhand <br><br>
               <strong>Phone:</strong> +91 9876543210<br>
-              <strong>Email:</strong> techno@birlainstitute.co.in<br>
+              <strong>Email:</strong> techno_forum@birlainstitute.co.in<br>
             </p>
           </div>
 
